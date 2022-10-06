@@ -2,4 +2,8 @@
 Classic pong game with some extra features.
 
 Video:
-https://user-images.githubusercontent.com/96949210/194370026-313e95ed-2b5b-4aba-8faa-409720852aa4.mp4
+
+
+
+https://user-images.githubusercontent.com/96949210/194370488-bc062bff-4c15-4101-86ae-aa9f4579985d.mp4
+
