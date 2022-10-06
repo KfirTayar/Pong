@@ -103,12 +103,12 @@ while True:
     if ball.ycor() > 290:
         ball.sety(290)
         ball.dy *= -1
-        winsound.PlaySound("C:/Users/Kfirt/Desktop/Internet Explorer/Projects/pongGame/bounce.wav", winsound.SND_ASYNC)
+        winsound.PlaySound("bounce.wav", winsound.SND_ASYNC)
 
     if ball.ycor() < -290:
         ball.sety(-290)
         ball.dy *= -1
-        winsound.PlaySound("C:/Users/Kfirt/Desktop/Internet Explorer/Projects/pongGame/bounce.wav", winsound.SND_ASYNC)
+        winsound.PlaySound("bounce.wav", winsound.SND_ASYNC)
 
     if ball.xcor() > 390:
         ball.goto(0,0)
@@ -118,7 +118,7 @@ while True:
         ball.dx *= -1 
         pen.clear()
         pen.write("Player A:  {}   ||   Player B:  {}".format(scoreA, scoreB), align="center", font=("David", 24, "normal"))
-        winsound.PlaySound("C:/Users/Kfirt/Desktop/Internet Explorer/Projects/pongGame/point.wav", winsound.SND_ASYNC)
+        winsound.PlaySound("point.wav", winsound.SND_ASYNC)
 
     if ball.xcor() < -390:
         ball.goto(0,0)
@@ -128,25 +128,25 @@ while True:
         ball.dx *= 1
         pen.clear()
         pen.write("Player A:  {}   ||   Player B:  {}".format(scoreA, scoreB), align="center", font=("David", 24, "normal"))
-        winsound.PlaySound("C:/Users/Kfirt/Desktop/Internet Explorer/Projects/pongGame/point.wav", winsound.SND_ASYNC)
+        winsound.PlaySound("point.wav", winsound.SND_ASYNC)
 
 
     #Paddle & ball collisions
     if ((ball.xcor() > 340 and ball.xcor() < 350) and (ball.ycor() < paddleB.ycor() + 40 and ball.ycor() > paddleB.ycor() - 40)):
         ball.setx(340)
         ball.dx *= -1.2
-        winsound.PlaySound("C:/Users/Kfirt/Desktop/Internet Explorer/Projects/pongGame/hit.wav", winsound.SND_ASYNC)
+        winsound.PlaySound("hit.wav", winsound.SND_ASYNC)
 
     if ((ball.xcor() < -340 and ball.xcor() > -350) and (ball.ycor() < paddleA.ycor() + 40 and ball.ycor() > paddleA.ycor() - 40)):
         ball.setx(-340)
         ball.dx *= -1.2
-        winsound.PlaySound("C:/Users/Kfirt/Desktop/Internet Explorer/Projects/pongGame/hit.wav", winsound.SND_ASYNC)
+        winsound.PlaySound("hit.wav", winsound.SND_ASYNC)
 
     #Winning the game
     if (scoreA == 3 or scoreB == 3):
         pen.clear()
         pen.write("Paddle {pronoun} is the winner!!".format(pronoun="A" if scoreA > scoreB else "B"), align="center", font=("David", 24, "normal"))
-        winsound.PlaySound("C:/Users/Kfirt/Desktop/Internet Explorer/Projects/pongGame/win.wav", winsound.SND_ASYNC)
+        winsound.PlaySound("win.wav", winsound.SND_ASYNC)
         time.sleep(5)
         pen.clear()
         pen.write("For a new game, please press ENTER", align="center", font=("David", 24, "normal"))
